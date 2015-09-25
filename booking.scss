@@ -1,0 +1,107 @@
+div#bookstepsView {
+  width: 940px;
+
+  ul.stepbox {
+    list-style: none;
+    background:url("images/sprite-bg-booking.png") repeat-x center center;
+    overflow: hidden;
+    font: normal 14px/32px 'Verdana', serif;
+    color: #FFFFFF;
+    padding-left: 0;
+    
+    li {
+      display: inline-block;
+      position: relative;
+      margin:  0 -33px 0 0;
+      padding: 0 33px 0 0;
+      float: left;
+      background: url("images/sprite-arrows-booking.png") no-repeat right center;
+      
+      
+      div {
+        position: relative;
+        top: 0;
+        padding: 0 0 0 38px;
+        width: 155px;
+        
+        .stepTitle {
+          display: block;
+          width: 140px;
+          left: 10px;
+          position: relative;
+          top: 6px;
+        }
+        .subTitle {
+          font-size: 11px;
+          display: block;
+          position: relative;
+          top: -7px;
+          left: 10px;
+        }
+      }
+    }
+    
+    li.step1 {
+      z-index: 16;
+    }
+    
+    li.step2 {
+      z-index: 15;
+    }
+    
+    li.step3 {
+      z-index: 14;
+    }
+    
+    li.step4 {
+      z-index: 13;
+    }
+    
+    li.step5 {
+      z-index: 12;
+    }
+    
+    li {
+      &.current{
+        background: url("images/sprite-arrows-booking.png") no-repeat right top;
+        div {
+          background:url("images/sprite-bg-booking.png") repeat-x top center;
+        }
+      }
+      &:hover{
+        /* background: url("images/sprite-arrows-booking.png") no-repeat right top;   */        
+      }
+      &:hover div {
+        /* background:url("images/sprite-bg-booking.png") repeat-x top center; */
+      } 
+      
+      &.done{
+        background: url("images/sprite-arrows-booking.png") no-repeat right bottom;
+        div {
+          background:url("images/sprite-bg-booking.png") repeat-x bottom center;
+          a {
+            color: #3e474c;
+            text-decoration: none;
+            background: url("images/sprite-done-booking.png") no-repeat right 2px;
+            position: absolute;
+            font-family: arial;
+            right:0;
+            top:6px;
+            display: block;
+            width: 24px;
+            height: 10px;
+            padding-top: 10px;
+            font-size: 10px;
+            line-height: 49px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    
+    li.first div {
+      padding: 0 0 0 10px;
+      width: 158px;
+    }
+  }
+}
